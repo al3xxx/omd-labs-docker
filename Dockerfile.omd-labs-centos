@@ -2,10 +2,9 @@ FROM centos:7
 MAINTAINER Simon Meggle<simon.meggle@consol.de>
 EXPOSE 80 443 22 4730 5666
 
-ENV REFRESHED 20170308
+ENV REFRESHED 20170530
 
-# OMD_VERSION given by build hook, default to 2.20
-ARG OMD_VERSION=2.20
+ENV OMD_VERSION=2.40
 ### OMD installation ######################################
 RUN rpm -Uvh "http://ftp.uni-stuttgart.de/epel/epel-release-latest-7.noarch.rpm" && \
     yum clean all && \
