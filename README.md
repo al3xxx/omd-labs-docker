@@ -68,7 +68,7 @@ Notice the section "Data volume check". In this case there were no host mounted 
 
 If you want to create a custom site, you have to build an own image:
 
-* clone this repository, `cd` into the folder containg the Dockerfile, e.g. `omd-labs-centos`
+* clone this repository
 * build a local image:
       export NEW_SITENAME=mynewsite; make -f Makefile.omd-labs-centos build    
 * run the image:
@@ -144,11 +144,11 @@ On the next start the folders are *not* empty anymore and used as usual.
 
 To test if everything worked, simply start the container with
 
-      make startvol
+      make -f Makefile.omd-labs-centos startvol
 
 This starts the container with the three data volumes. Everything the container writes into one of those three folder, it will synchronized into the persistent file system.   
 
-(`make startvol` is just a handy shortcut to bring up the container. In Kubernetes/OpenShift you won't need this.)  
+(`make -f Makefile.omd-labs-centos startvol` is just a handy shortcut to bring up the container. In Kubernetes/OpenShift you won't need this.)  
 
 ## Ansible drop-ins
 
