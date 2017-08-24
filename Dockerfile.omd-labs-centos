@@ -4,7 +4,7 @@ EXPOSE 80 443 22 4730 5666
 
 ENV REFRESHED 20170824
 
-ENV OMD_VERSION=2.40
+ENV OMD_VERSION=2.60
 ### OMD installation ######################################
 RUN rpm -Uvh "http://ftp.uni-stuttgart.de/epel/epel-release-latest-7.noarch.rpm" && \
     yum clean all && \
